@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Result</title>
+</head>
+<body>
+<h1>Результат введённых данных</h1>
+
+<p th:text="'Name: ' + ${user.name}"></p>
+<p th:text="'Location: ' + ${user.location}"></p>
+<p th:text="'Occupation: ' + ${user.occupation}"></p>
+<p th:text="'Favorite Books: ' + ${user.favoriteBooks}"></p>
+<p th:text="'Favorite Movies: ' + ${user.favoriteMovies}"></p>
+<p th:text="'Dislikes: ' + ${user.dislikes}"></p>
+
+</body>
+</html>

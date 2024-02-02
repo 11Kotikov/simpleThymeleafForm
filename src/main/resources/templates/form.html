@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="#" th:action="@{/form}" th:object="${user}" method="post">
+    <h1>Input Form</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" th:field="*{name}" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" th:field="*{location}" required>
+
+    <label for="occupation">Occupation:</label>
+    <input type="text" id="occupation" th:field="*{occupation}" required>
+
+    <label for="favoriteBooks">Favorite Books:</label>
+    <input type="text" id="favoriteBooks" th:field="*{favoriteBooks}" required>
+
+    <label for="favoriteMovies">Favorite Movies:</label>
+    <input type="text" id="favoriteMovies" th:field="*{favoriteMovies}" required>
+
+    <label for="dislikes">Dislikes:</label>
+    <input type="text" id="dislikes" th:field="*{dislikes}" required>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
